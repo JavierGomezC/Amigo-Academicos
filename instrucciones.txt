@@ -1,0 +1,19 @@
+Para ejecutar el proyecto
+
+Luego de abrirlo en Eclipse dar clic derecho sobre el proyecto
+y propiedades, entra a la pestaña "Java Build Path".
+en "Libraries" se quitan los .jar y se agregan nuevamente, si 
+no los tiene en su pc use lo que desargo de github
+-Add External JARs...
+-..\Amigo-Academicos\apache-tomcat-8.5.31\lib (servlet-api)
+-..\Amigo-Academicos\mysql-connector-java-5.1.46 (mysql-connector-java-5.1.46 y mysql-connector-java-5.1.46-bin)
+
+Aplicar y cerrar
+
+Ahora para ejecutar se da Run As - Run On Server al index.jsp
+Se elige algun servidor de Tomcat v8.5 y dejar que cargue
+
+(Si esto demora mucho y tira un error de tiempo)
+Talvez sea mi computador o que el codigo esta mal optimizado
+para arreglar esto se le da dobleclic al servidor que se esta utilizando
+y se busca la pestaña "Timeouts" y en vez de 45 colocar 70 o mas
