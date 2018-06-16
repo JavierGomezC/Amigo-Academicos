@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<head>
+    <title>UFPS Asesorías</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <!-- CSS Bootstrap-->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/templatemo_misc.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="css/templatemo_style.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <!-- JavaScripts -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/modernizr.js"></script>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="overlay-bg"></div>
+    <div class="responsive-navigation visible-sm visible-xs">
+        <a href="#" class="menu-toggle-btn">
+            <i class="fa fa-bars fa-2x"></i>
+        </a>
+        <div class="responsive_menu">
+            <ul class="main_menu">
+                <li><a class="show-1 homebutton" href="#"><i class="fa fa-home"></i>Horario clases</a></li>
+                <li><a class="show-4" href="#"><i class="fa fa-cogs"></i>Configuracion</a></li>
+                <li><a class="show-5" href="#"><i class="fa fa-globe"></i>Encuentranos</a></li>
+            </ul> 
+        </div> 
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+
+                <!-- Menu estatico -->
+                <div class="col-md-2 visible-md visible-lg">
+                    <div class="main_menu">
+                        <ul class="menu">
+                            <li><a class="show-1 homebutton" href="#" data-toggle="tooltip" data-original-title="Horario clases"><i class="fa fa-home"></i></a></li>
+                            <li><a class="show-4" href="#" data-toggle="tooltip" data-original-title="Configuracion"><i class="fa fa-cog"></i></a></li>
+                            <li><a class="show-5" href="#" data-toggle="tooltip" data-original-title="Encuentranos"><i class="fa fa-globe"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contenido -->
+                <div class="col-md-10">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="templatemo_logo">
+                                <a href="index.html">
+                                    <img src="images/templatemo_logo.png" alt="Logo">
+                                </a>
+                            </div> 
+                        </div> 
+                    </div> 
+
+
+                    <div id="menu-container">
+                        
+                        <div id="menu1" class="homepage">
+                            <div class="row">
+<body>
+<h1 align="center">Horario de asesorias</h1>
+
+    <table align="center" border="4" bordercolor="white"
+    cellpadding="10" cellspacing="20">
+      <tr>
+        <th bgcolor="blue">Hora</th><th bgcolor="blue">Lunes</th><th bgcolor="blue">Martes</th><th bgcolor="blue">Miercoles</th>
+<th bgcolor="blue">Jueves</th><th bgcolor="blue">Viernes</th>
+</tr>
+<tr>
+<td>8-10</td><td align="center" colspan="3">Mate</td><td>Compu</td><td>Mate</td>
+</tr>
+<tr>
+<td>10-12</td><td>Geografia</td><td>Historia</td><td>Geografía</td>
+<td>Historia</td><td>Geografia</td>
+</tr>
+<tr>
+<td>12-14</td><td>Física</td><td>Ingles</td><td>Fisica</td><td align="center" rowspan="2">Inglés<br>y<br>Computacion</td><td>Fisica</td>
+</tr>
+<tr>
+<td>15-17</td><td>Anatomia</td><td>Karate</td><td>Karate</td><td>Karate</td></tr>
+</table>
+</body>
+                                </div> 
+                        </div> 
+
+                        <div id="menu-3" class="content asesorias">
+                            <div class="page-header">
+
+                                <h2 class="page-title">Horario asesorias</h2>
+                            </div>
+                            <div class="content-inner">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3 class="widget-title">Consulta</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="menu-4" class="content configuracion">
+                            <div class="page-header">
+                                <h2 class="page-title">Configurar horario</h2>
+                            </div>
+                            <div class="content-inner">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 class="widget-title">Configurar horario de Asesorias
+                                            <center><button type="button" class="btn btn-success">GUARDAR</button></center></h3>
+                                    </div>
+                                </div>
+<table class="table table-condensed">
+<tr>
+<th>Hora</th><th>Lunes</th><th>Martes</th><th>Miercoles</th>
+<th>Jueves</th><th>Viernes</th>
+</tr>
+<tr>
+<td>6AM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase1">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase1)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase2">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase2)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase3">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase3)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase4">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase4)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase5">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase5)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr>
+<tr>
+<td>7AM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase6">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase6)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase7">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase7)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase8">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase8)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase9">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase9)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase10">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase10)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>8AM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase11">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase11)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase12">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase12)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase13">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase13)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase14">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase14)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase15">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase15)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>9AM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase16">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase16)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase17">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase17)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase18">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase18)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase19">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase19)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase20">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase20)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>10AM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase21">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase21)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase22">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase22)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase23">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase23)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase24">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase24)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase25">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase25)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>11AM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase26">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase26)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase27">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase27)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase28">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase28)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase29">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase29)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase30">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase30)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>12PM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase31">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase31)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase32">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase32)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase33">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase33)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase34">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase34)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase35">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase35)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>1PM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase36">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase36)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase37">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase37)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase38">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase38)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase39">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase39)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase40">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase40)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>2PM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase41">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase41)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase42">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase42">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase43">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase43)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase44">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase44)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase45">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase45)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>3PM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase46">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase46)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase47">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase47)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase48">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase48)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase49">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase49">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase50">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase50)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>4PM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase51">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase51)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase52">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase52)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase53">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase53)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase54">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase54)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase55">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase55)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>5PM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase56">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase56)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase57">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase57)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase58">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase58)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase59">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase59)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase60">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase60)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr><tr>
+<td>6PM</td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase61">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase61)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase62">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase62)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase63">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase63)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase64">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase64)">Cambiar</a></li>
+  
+  </ul>
+</div></td><td><div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" id="button_ase65">Sin asesoria
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="cambiarNombre(button_ase65)">Cambiar</a></li>
+  
+  </ul>
+</div></td>
+</tr>
+</table>
+                            </div>
+
+                        </div>
+
+                        <div id="menu-5" class="content">
+                            <div class="page-header">
+                                <h2 class="page-title">Encuentranos.</h2>
+                            </div>
+                            <div class="content-inner">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h3 class="widget-title">Envíanos un mensaje</h3>
+                                        <p>No dudes en enviarnos un mensaje , te contestaremos al instante cualquier duda o sugerencia que tengas para nuestra institución.</p>
+                                        <div class="row contact-form">
+                                            <div class="col-md-4">
+                                                <label for="name-id">Nombre:</label>
+                                                <input name="name-id" type="text" id="name-id" maxlength="40">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="email-id">E-mail:</label>
+                                                <input name="email-id" type="text" id="email-id" maxlength="40">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="subject-id">Asunto:</label>
+                                                <input name="subject-id" type="text" id="subject-id" maxlength="60">
+                                            </div>
+                                        </div>
+                                        <p class="full-row">
+                                            <label for="message">Mensaje:</label>
+                                            <textarea name="message" id="message" rows="6"></textarea>
+                                        </p>
+                                        <input class="mainBtn" type="submit" name="" value="Enviar mensaje">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="information">
+                                            <h3 class="widget-title">Información:</h3>
+                                            <ul class="our-location">
+                                                <li><span><i class="fa fa-map-marker"></i>Dirección:</span>Av. Grancolombia #12E-96 Cúcuta - Norte de Santander</li>
+                                                <li><span><i class="fa fa-map-marker"></i>Telefono:</span>(7) 5776655</li>
+                                                <li><span><i class="fa fa-map-marker"></i>Email:</span>oficinadeprensa@ufps.edu.co</li>
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                                     <div class="our-team">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h3 class="widget-title">Nuestro equipo</h3>
+                                        </div>
+                                    </div>
+
+                                    <!-- Informacion estudiantes -->
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="team-member">
+                                                <div class="member-thumb">
+                                                    <img src="images/team1.jpg" alt="">
+                                                </div>
+                                                <div class="member-infos">
+                                                    <h4 class="member-name">Sebastian</h4>
+                                                    <span class="member-role">Web Designer</span>
+                                                    <p class="member-desc">Estudiante de ingeniería de sistema de la Universidad Francisco de Paula Santander.</p>
+                                                    <ul class="member-social">
+                                                        <li><a href="https://www.facebook.com/sebastian.castelanos/" class="fa fa-facebook"></a></li>
+                                                        <li><a href="https://www.twitter.com/sebaswy" class="fa fa-twitter"></a></li>
+                                                        <li><a href="https://www.instagram.com/sebaswyy/" class="fa fa-instagram"></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="team-member">
+                                                <div class="member-thumb">
+                                                    <img src="images/team2.jpg" alt="">
+                                                </div>
+                                                <div class="member-infos">
+                                                    <h4 class="member-name">Felipe</h4>
+                                                    <span class="member-role">Web Developer</span>
+                                                    <p class="member-desc">Estudiante de ingeniería de sistema de la Universidad Francisco de Paula Santander.</p>
+                                                    <ul class="member-social">
+                                                        <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                        <li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
+                                                        <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="team-member">
+                                                <div class="member-thumb">
+                                                    <img src="images/team3.jpg" alt="">
+                                                </div>
+                                                <div class="member-infos">
+                                                    <h4 class="member-name">Javier</h4>
+                                                    <span class="member-role">Back-End</span>
+                                                    <p class="member-desc">Estudiante de ingeniería de sistema de la Universidad Francisco de Paula Santander.</p>
+                                                    <ul class="member-social">
+                                                        <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                        <li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
+                                                        <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- Fin informacion-->
+                        
+                        <div class="site-footer">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="copyright-text">Copyright &copy; 2018 UFPS 
+                                    </p>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="social-icons-footer">
+                                        <ul>
+                                            <li><a target="_parent" href="https://www.facebook.com/Ufps.edu.co/" class="fa fa-facebook"></a></li>
+                                            <li><a href="https://twitter.com/ufpscucuta" class="fa fa-twitter"></a></li>
+                                            <li><a href="https://www.instagram.com/ufpscucuta/" class="fa fa-instagram"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.lightbox.js"></script>
+    <script src="js/templatemo_custom.js"></script>
+    <script>
+		function cambiarNombre(par) {
+			par.innerHTML=par.innerHTML=="Con asesoria"?"Sin asesoria":"Con asesoria";
+			 if ($("#"+par).hasClass('btn btn-warning dropdown-toggle')){
+     $("#"+par).addClass('btn btn-success dropdown-toggle');
+      $("#"+par).removeClass('btn btn-warning dropdown-toggle');
+    }else {
+      $("#"+par).removeClass('btn btn-success dropdown-toggle');
+      $("#"+par).addClass('btn btn-warning dropdown-toggle');
+    }
+		}
+		</script>
+</body>
+</html>
