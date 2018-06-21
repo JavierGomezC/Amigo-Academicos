@@ -6,7 +6,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="configuracion/css/css.css" />
+		<link rel="stylesheet" href="Index/configuracion/css/css.css" />
 	</head>
 	<body class="cargando">
 			<div id="principal">
@@ -17,36 +17,38 @@
 							<p>Inicio de sesión</p>
 						</header>
 						
-						<hr />
-						<form accept-charset="UTF-8" role="form" method="post" action="LoginServlet">
+						<hr/>
+						<form method="post" action="LoginServlet">
 							<div class="field">
-								<input type="text" name="codigo" id="codigo" placeholder="Codigo" value="11505372"/>
+								<input type="text" name="codigo" id="codigo" placeholder="Codigo" value="1151486"/>
 							</div>
 							<div class="field">
-								<input type="password" name="password" id="password" placeholder="Contraseña" value="1234"/>
+								<input type="password" name="password" id="password" placeholder="Contraseña" value="algo123"/>
 							</div>
 							<div class="field">
-								<input type="password" name="document" id="document" placeholder="Documento" value="105897235"/>
+								<input type="password" name="document" id="document" placeholder="Documento" value="1090519880"/>
 							</div>
 							<div class="field">
 								<div class="select-principal">
 									<select name="department" id="department">
 										<option value="0">Tipo</option>
 										<option value="1">Estudiante</option>
-										<option value="2">Profesor</option>
+										<option value="2">Asesor</option>
 									</select>
 								</div>
-							</div>
-							<div class="field">
-								<label>Eres un robot?</label>
-								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Si</label>
-								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
 							</div>
 							<ul class="actions">
 								<li><input type="submit" name="btnInicio" id="btnInicio" value="Entrar" ></li>
 							</ul>
 						</form>
-						<hr />
+						
+						<form method="post" action="irRegistroServlet">
+							<ul class="actions">
+								<li><input type="submit" name="btnRegistro" id="btnRegistro" value="Registrarse" ></li>
+							</ul>
+						</form>
+						
+						<hr/>
 						<footer>
 							<ul class="icons">
 								<li><a target="_parent" href="https://www.facebook.com/Ufps.edu.co/" class="fa fa-facebook"></a></li>

@@ -68,23 +68,29 @@ String dato62 = request.getParameter("dato62");
 String dato63 = request.getParameter("dato63");
 String dato64 = request.getParameter("dato64");
 String dato65 = request.getParameter("dato65");
+
+Control control = new Control();
+List<Asesor> asesores = control.aseDao.list();
 %>
+<%@page import="java.util.List" %>
+<%@page import="java.util.ArrayList" %>
+<%@page import="model.Control" %>
+<%@page import="entities.Asesor" %>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<head>
-    <title>UFPS Asesorías</title>
+<title>UFPS Asesorías</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta name="description" content="">
     <meta name="author" content="templatemo">
     <meta charset="UTF-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
     
-    <!-- CSS Bootstrap-->
+    <!-- CSS Bootstrap -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="css/templatemo_misc.css">
@@ -105,7 +111,8 @@ String dato65 = request.getParameter("dato65");
         <div class="responsive_menu">
             <ul class="main_menu">
                 <li><a class="show-1 homebutton" href="#"><i class="fa fa-home"></i>Horario clases</a></li>
-                <li><a class="show-4" href="#"><i class="fa fa-cogs"></i>Configuracion</a></li>
+                <li><a class="show-2" href="#"><i class="fa fa-group"></i>Calificacion</a></li>
+                <li><a class="show-3" href="#"><i class="fa fa-briefcase"></i>Asesorias</a></li>
                 <li><a class="show-5" href="#"><i class="fa fa-globe"></i>Encuentranos</a></li>
             </ul> 
         </div> 
@@ -120,7 +127,8 @@ String dato65 = request.getParameter("dato65");
                     <div class="main_menu">
                         <ul class="menu">
                             <li><a class="show-1 homebutton" href="#" data-toggle="tooltip" data-original-title="Horario clases"><i class="fa fa-home"></i></a></li>
-                            <li><a class="show-4" href="#" data-toggle="tooltip" data-original-title="Configuracion"><i class="fa fa-cog"></i></a></li>
+                            <li><a class="show-2" href="#" data-toggle="tooltip" data-original-title="Calificacion"><i class="fa fa-user"></i></a></li>
+                            <li><a class="show-3" href="#" data-toggle="tooltip" data-original-title="Asesorias"><i class="fa fa-briefcase"></i></a></li>
                             <li><a class="show-5" href="#" data-toggle="tooltip" data-original-title="Encuentranos"><i class="fa fa-globe"></i></a></li>
                         </ul>
                     </div>
@@ -144,7 +152,11 @@ String dato65 = request.getParameter("dato65");
                         
                         <div id="menu1" class="homepage">
                             <div class="row">
-<h1 align="center">Horario de asesorias</h1>
+<head>
+<title>Horario Escolar Extendido</title>
+</head>
+<body>
+<h1 align="center">Horario escolar</h1>
 
     <table align="center" border="4" bordercolor="white"
     cellpadding="10" cellspacing="20">
@@ -165,30 +177,134 @@ String dato65 = request.getParameter("dato65");
 <tr>
 <td>15-17</td><td>Anatomia</td><td>Karate</td><td>Karate</td><td>Karate</td></tr>
 </table>
+</body>
                                 </div> 
+                        </div> 
+
+                        <div id="menu-2" class="content calificacion">
+                            <div class="page-header">
+                                <h2 class="page-title">Calificacion</h2>
+                            </div> 
+                            <div class="content-inner">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h3 class="widget-title">Como te parecen las asesorias del docente?</h3>
+                                        <p>El profesor es muy puntual</p><p>Sus asesorias son entretenidas.</p>
+                                        <p>Cumple el horario completo estipulado.</p><p>No falta a las asesorias.</p>
+                                    </div> 
+                                    <div class="col-md-5">
+                                        <h3 class="widget-title">Puntuacion</h3>
+                                        <ul class="progess-bars">
+                                            <li>
+                                                <div class="ec-stars-wrapper">
+    <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+    <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+    <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+    <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+    <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+</div>
+                                            </li>
+                                            <li>
+                                               <div class="ec-stars-wrapper">
+    <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+    <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+    <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+    <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+    <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+</div>
+                                            </li>
+                                            <li>
+                                                <div class="ec-stars-wrapper">
+    <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+    <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+    <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+    <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+    <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+</div>
+                                            </li>
+                                            <li>
+                                                <div class="ec-stars-wrapper">
+    <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+    <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+    <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+    <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+    <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+</div>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </div>
+
+                            </div> 
                         </div> 
 
                         <div id="menu-3" class="content asesorias">
                             <div class="page-header">
-
                                 <h2 class="page-title">Horario asesorias</h2>
-                            </div>
+                            </div> 
                             <div class="content-inner">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h3 class="widget-title">Consulta</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   
-                        <div id="menu-4" class="content configuracion">
-                            <div class="page-header">
-                                <h2 class="page-title">Configurar horario</h2>
-                            </div>
-                            
-<form method="post" action="../ConfigurarHorarioServlet">
-	<div class="content-inner">
+                                        <h3 class="widget-title">Tus dias de asesorias</h3>
+                                    </div> 
+                                    <div class="col-md-6">
+                                    </div> 
+                                </div> 
+                                <div class="row">
+
+<head>
+<title>Horario Escolar Extendido</title>
+</head>
+<body>
+<h1 align="center">Horario asesorias</h1>
+
+<form method="post" action="../listarServlet">
+<table class="table table-condensed">
+	<tr>
+		<th>
+			<div class="select-principal">
+				<select name="carrera" id="carrera">
+					<option value="0">Carrera...</option>
+					<option value="Ingeniería Civil">Ingeniería Civil</option>
+					<option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+					<option value="Ingeniería Electrónica">Ingeniería Electrónica</option>
+					<option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option>
+					<option value="Ingeniería Industrial">Ingeniería Industrial</option>
+					<option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+					<option value="Ingeniería Ambiental">Ingeniería Ambiental</option>
+				</select>
+			</div>
+		</th>
+		<th>
+			<div class="select-principal">
+				<select name="materia" id="materia">
+					<option value="0">Materia...</option>
+					<option value="Calculo diferencial">Calculo diferencial</option>
+					<option value="Calculo integral">Calculo integral</option>
+					<option value="Fisica mecanica">Fisica mecanica</option>
+					<option value="Fundamentos de programacion">Fundamentos de programacion</option>
+					<option value="Programacion Web">Programacion Web</option>
+				</select>
+			</div>
+		</th>
+		<th>
+			<div class="select-principal">
+				<select id="asesores" name="asesores">
+					<option value="0" >Asesor...</option>
+					<%if(asesores != null)
+						for(Asesor asesor: asesores){%>
+							<option value="<%=asesor.codigo %>" ><%=asesor.nombre %></option>
+						<%}%>
+				</select>
+			</div>
+		</th>
+		<th>
+			<input  type="submit" name="btnVer" id="btnVer" value="Ver Horario">
+		</th>
+	</tr>
+</table>
+
+<div class="content-inner">
 		<table class="table table-condensed">
 		<tr>
 		<th>Hora</th><th>Lunes</th><th>Martes</th><th>Miercoles</th>
@@ -196,125 +312,127 @@ String dato65 = request.getParameter("dato65");
 		</tr>
 		<tr>
 		<td>6AM</td>
-		<td><input type="submit" name="btnLunes1" id="btnLunes1" value="<%=dato1 %>" ></td>
-		<td><input type="submit" name="btnMartes1" id="btnMartes1" value="<%=dato14 %>" ></td>
-		<td><input type="submit" name="btnMiercoles1" id="btnMiercoles1" value="<%=dato27 %>" ></td>
-		<td><input type="submit" name="btnJueves1" id="btnJueves1" value="<%=dato40 %>" ></td>
-		<td><input type="submit" name="btnViernes1" id="btnViernes1" value="<%=dato53 %>" ></td>
+		<td><%=dato1 %></td>
+		<td><%=dato14 %></td>
+		<td><%=dato27 %></td>
+		<td><%=dato40 %></td>
+		<td><%=dato53 %></td>
 		</tr>
 		
 		<tr>
 		<td>7AM</td>
-		<td><input type="submit" name="btnLunes2" id="btnLunes2" value="<%=dato2 %>" ></td>
-		<td><input type="submit" name="btnMartes2" id="btnMartes2" value="<%=dato15 %>" ></td>
-		<td><input type="submit" name="btnMiercoles2" id="btnMiercoles2" value="<%=dato28 %>" ></td>
-		<td><input type="submit" name="btnJueves2" id="btnJueves2" value="<%=dato41 %>" ></td>
-		<td><input type="submit" name="btnViernes3" id="btnViernes3" value="<%=dato54 %>" ></td>
+		<td><%=dato2 %></td>
+		<td><%=dato15 %></td>
+		<td><%=dato28 %></td>
+		<td><%=dato41 %></td>
+		<td><%=dato54 %></td>
 		</tr>
 		
 		<tr>
 		<td>8AM</td>
-		<td><input type="submit" name="btnLunes3" id="btnLunes3" value="<%=dato3 %>" ></td>
-		<td><input type="submit" name="btnMartes3" id="btnMartes3" value="<%=dato16 %>" ></td>
-		<td><input type="submit" name="btnMiercoles3" id="btnMiercoles3" value="<%=dato29 %>" ></td>
-		<td><input type="submit" name="btnJueves3" id="btnJueves3" value="<%=dato42 %>" ></td>
-		<td><input type="submit" name="btnViernes3" id="btnViernes3" value="<%=dato55 %>" ></td>
+		<td><%=dato3 %></td>
+		<td><%=dato16 %></td>
+		<td><%=dato29 %></td>
+		<td><%=dato42 %></td>
+		<td><%=dato55 %></td>
 		</tr>
 		
 		<tr>
 		<td>9AM</td>
-		<td><input type="submit" name="btnLunes4" id="btnLunes4" value="<%=dato4 %>" ></td>
-		<td><input type="submit" name="btnMartes4" id="btnMartes4" value="<%=dato17 %>" ></td>
-		<td><input type="submit" name="btnMiercoles4" id="btnMiercoles4" value="<%=dato30 %>" ></td>
-		<td><input type="submit" name="btnJueves4" id="btnJueves4" value="<%=dato43 %>" ></td>
-		<td><input type="submit" name="btnViernes4" id="btnViernes4" value="<%=dato56 %>" ></td>
+		<td><%=dato4 %></td>
+		<td><%=dato17 %></td>
+		<td><%=dato30 %></td>
+		<td><%=dato43 %></td>
+		<td><%=dato56 %></td>
 		</tr>
 		
 		<tr>
 		<td>10AM</td>
-		<td><input type="submit" name="btnLunes5" id="btnLunes5" value="<%=dato5 %>" ></td>
-		<td><input type="submit" name="btnMartes5" id="btnMartes5" value="<%=dato18 %>" ></td>
-		<td><input type="submit" name="btnMiercoles5" id="btnMiercoles5" value="<%=dato31 %>" ></td>
-		<td><input type="submit" name="btnJueves5" id="btnJueves5" value="<%=dato44 %>" ></td>
-		<td><input type="submit" name="btnViernes5" id="btnViernes5" value="<%=dato57 %>" ></td>
+		<td><%=dato5 %></td>
+		<td><%=dato18 %></td>
+		<td><%=dato31 %></td>
+		<td><%=dato44 %></td>
+		<td><%=dato57 %></td>
 		</tr>
 		
 		<tr>
 		<td>11AM</td>
-		<td><input type="submit" name="btnLunes6" id="btnLunes6" value="<%=dato6 %>" ></td>
-		<td><input type="submit" name="btnMartes6" id="btnMartes6" value="<%=dato19 %>" ></td>
-		<td><input type="submit" name="btnMiercoles6" id="btnMiercoles6" value="<%=dato32 %>" ></td>
-		<td><input type="submit" name="btnJueves6" id="btnJueves6" value="<%=dato45 %>" ></td>
-		<td><input type="submit" name="btnViernes6" id="btnViernes6" value="<%=dato58 %>" ></td>
+		<td><%=dato6 %></td>
+		<td><%=dato19 %></td>
+		<td><%=dato32 %></td>
+		<td><%=dato45 %></td>
+		<td><%=dato58 %></td>
 		</tr>
 		
 		<tr>
 		<td>12AM</td>
-		<td><input type="submit" name="btnLunes7" id="btnLunes7" value="<%=dato7 %>" ></td>
-		<td><input type="submit" name="btnMartes7" id="btnMartes7" value="<%=dato20 %>" ></td>
-		<td><input type="submit" name="btnMiercoles7" id="btnMiercoles7" value="<%=dato33 %>" ></td>
-		<td><input type="submit" name="btnJueves7" id="btnJueves7" value="<%=dato46 %>" ></td>
-		<td><input type="submit" name="btnViernes7" id="btnViernes7" value="<%=dato59 %>" ></td>
+		<td><%=dato7 %></td>
+		<td><%=dato20 %></td>
+		<td><%=dato33 %></td>
+		<td><%=dato46 %></td>
+		<td><%=dato59 %></td>
 		</tr>
 		
 		<tr>
 		<td>1PM</td>
-		<td><input type="submit" name="btnLunes8" id="btnLunes8" value="<%=dato8 %>" ></td>
-		<td><input type="submit" name="btnMartes8" id="btnMartes8" value="<%=dato21 %>" ></td>
-		<td><input type="submit" name="btnMiercoles8" id="btnMiercoles8" value="<%=dato34 %>" ></td>
-		<td><input type="submit" name="btnJueves8" id="btnJueves8" value="<%=dato47 %>" ></td>
-		<td><input type="submit" name="btnViernes8" id="btnViernes8" value="<%=dato60 %>" ></td>
+		<td><%=dato8 %></td>
+		<td><%=dato21 %></td>
+		<td><%=dato34 %></td>
+		<td><%=dato47 %></td>
+		<td><%=dato60 %></td>
 		</tr>
 		
 		<tr>
 		<td>2PM</td>
-		<td><input type="submit" name="btnLunes9" id="btnLunes9" value="<%=dato9 %>" ></td>
-		<td><input type="submit" name="btnMartes9" id="btnMartes9" value="<%=dato22 %>" ></td>
-		<td><input type="submit" name="btnMiercoles9" id="btnMiercoles9" value="<%=dato35 %>" ></td>
-		<td><input type="submit" name="btnJueves9" id="btnJueves9" value="<%=dato48 %>" ></td>
-		<td><input type="submit" name="btnViernes9" id="btnViernes9" value="<%=dato61 %>" ></td>
+		<td><%=dato9 %></td>
+		<td><%=dato22 %></td>
+		<td><%=dato35 %></td>
+		<td><%=dato48 %></td>
+		<td><%=dato61 %></td>
 		</tr>
 		
 		<tr>
 		<td>3PM</td>
-		<td><input type="submit" name="btnLunes10" id="btnLunes10" value="<%=dato10 %>" ></td>
-		<td><input type="submit" name="btnMartes10" id="btnMartes10" value="<%=dato23 %>" ></td>
-		<td><input type="submit" name="btnMiercoles10" id="btnMiercoles10" value="<%=dato36 %>" ></td>
-		<td><input type="submit" name="btnJueves10" id="btnJueves10" value="<%=dato49 %>" ></td>
-		<td><input type="submit" name="btnViernes10" id="btnViernes10" value="<%=dato62 %>" ></td>
+		<td><%=dato10 %></td>
+		<td><%=dato23 %></td>
+		<td><%=dato36 %></td>
+		<td><%=dato49 %></td>
+		<td><%=dato62 %></td>
 		</tr>
 		
 		<tr>
 		<td>4PM</td>
-		<td><input type="submit" name="btnLunes11" id="btnLunes11" value="<%=dato11 %>" ></td>
-		<td><input type="submit" name="btnMartes11" id="btnMartes11" value="<%=dato24 %>" ></td>
-		<td><input type="submit" name="btnMiercoles11" id="btnMiercoles11" value="<%=dato37 %>" ></td>
-		<td><input type="submit" name="btnJueves11" id="btnJueves11" value="<%=dato50 %>" ></td>
-		<td><input type="submit" name="btnViernes11" id="btnViernes11" value="<%=dato63 %>" ></td>
+		<td><%=dato11 %></td>
+		<td><%=dato24 %></td>
+		<td><%=dato37 %></td>
+		<td><%=dato50 %></td>
+		<td><%=dato63 %></td>
 		</tr>
 		
 		<tr>
 		<td>5PM</td>
-		<td><input type="submit" name="btnLunes12" id="btnLunes12" value="<%=dato12 %>" ></td>
-		<td><input type="submit" name="btnMartes12" id="btnMartes12" value="<%=dato25 %>" ></td>
-		<td><input type="submit" name="btnMiercoles12" id="btnMiercoles12" value="<%=dato38 %>" ></td>
-		<td><input type="submit" name="btnJueves12" id="btnJueves12" value="<%=dato51 %>" ></td>
-		<td><input type="submit" name="btnViernes12" id="btnViernes12" value="<%=dato64 %>" ></td>
+		<td><%=dato12 %></td>
+		<td><%=dato25 %></td>
+		<td><%=dato38 %></td>
+		<td><%=dato51 %></td>
+		<td><%=dato64 %></td>
 		</tr>
 		
 		<tr>
 		<td>6PM</td>
-		<td><input type="submit" name="btnLunes13" id="btnLunes13" value="<%=dato13 %>" ></td>
-		<td><input type="submit" name="btnMartes13" id="btnMartes13" value="<%=dato26 %>" ></td>
-		<td><input type="submit" name="btnMiercoles13" id="btnMiercoles13" value="<%=dato39 %>" ></td>
-		<td><input type="submit" name="btnJueves13" id="btnJueves13" value="<%=dato52 %>" ></td>
-		<td><input type="submit" name="btnViernes13" id="btnViernes13" value="<%=dato65 %>"></td>
+		<td><%=dato13 %></td>
+		<td><%=dato26 %></td>
+		<td><%=dato39 %></td>
+		<td><%=dato52 %></td>
+		<td><%=dato65 %></td>
 		</tr>
 		</table>
 	</div>
 </form>
+</body>
+                                </div>
+                            </div>
                         </div>
-                        
                         <div id="menu-5" class="content">
                             <div class="page-header">
                                 <h2 class="page-title">Encuentranos.</h2>
@@ -352,20 +470,18 @@ String dato65 = request.getParameter("dato65");
                                                 <li><span><i class="fa fa-map-marker"></i>Telefono:</span>(7) 5776655</li>
                                                 <li><span><i class="fa fa-map-marker"></i>Email:</span>oficinadeprensa@ufps.edu.co</li>
                                             </ul>
-                                        </div> 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                                     <div class="our-team">
+                                    <div class="our-team">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <h3 class="widget-title">Nuestro equipo</h3>
                                         </div>
                                     </div>
-
-                                    <!-- Informacion estudiantes -->
+                                   <!-- informacion estudiantes-->
                                     <div class="row">
                                         <div class="col-md-4 col-sm-6">
                                             <div class="team-member">
@@ -417,7 +533,7 @@ String dato65 = request.getParameter("dato65");
                                                     </ul>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> 
                                     </div>
                                 </div> <!-- Fin informacion-->
                         
@@ -437,7 +553,7 @@ String dato65 = request.getParameter("dato65");
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> <!-- /.site-footer -->
 
                     </div>
                 
@@ -447,9 +563,30 @@ String dato65 = request.getParameter("dato65");
     </div>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
     <script src="js/jquery.mixitup.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/jquery.lightbox.js"></script>
     <script src="js/templatemo_custom.js"></script>
+    <script>
+        function initialize() {
+          var mapOptions = {
+            zoom: 15,
+            center: new google.maps.LatLng(16.832179,96.134976)
+          };
+
+          var map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+        }
+
+        function loadScript() {
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+              'callback=initialize';
+          document.body.appendChild(script);
+        }
+
+    </script>
 </body>
 </html>

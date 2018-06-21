@@ -18,12 +18,12 @@ public class Control {
 	
 	public int horario;
 	
-	EstudianteDao estuDao;
-	AsesorDao aseDao;
-	AsesoriaDao asesoDao;
-	HoraDao horaDao;
-	HorarioDao horarioDao;
-	SesionDao sesionDao;
+	public EstudianteDao estuDao;
+	public AsesorDao aseDao;
+	public AsesoriaDao asesoDao;
+	public HoraDao horaDao;
+	public HorarioDao horarioDao;
+	public SesionDao sesionDao;
 	
 	public Control(){
 		asesores = new ArrayList<>();
@@ -250,10 +250,32 @@ public class Control {
 		horaDao.update(ho);
 	}
 	
+	public Horario mostrarHorario(int idAse){
+		int idAsesor = 0;
+		asesores = aseDao.list();
+		for(int i = 0; i < asesores.size(); i++) {
+			if(idAse == asesores.get(i).codigo) {
+				idAsesor = i;
+			}
+		}
+		int idH = asesores.get(idAsesor).horarioAsesorias.id;
+		return horarioDao.find(idH);
+	}
+	
 	public Horario horario(){
 		Sesion o = sesionDao.find(0);
 		int sesionAse = o.idActualA;
 		asesores = aseDao.list();
 		return asesores.get(sesionAse).horarioAsesorias;
+	}
+	
+	public List<Asesor> listaAsesores(String car, String mat) {
+		List<Asesor> as = aseDao.list();
+		List<Asesor> ase = new ArrayList<>();
+		for(int i = 0; i < as.size(); i++) {
+			if(as.get(i).carrera.equals(car) && as.get(i).materia.equals(mat))
+				ase.add(as.get(i));
+		}
+		return ase;
 	}
 }
