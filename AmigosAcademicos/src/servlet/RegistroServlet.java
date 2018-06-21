@@ -60,15 +60,14 @@ public class RegistroServlet extends HttpServlet {
 		
 		if(btnRegistro != null){
 			if(tipo == 1) {
+				control.registrarEstudiante(nom, cod, 0, car, 0, cla, doc);
 				Estudiante estudiante = new Estudiante(nom, cod, 0, car, 0, cla, doc);
 				EstudianteDao estu = new EstudianteDao();
 				estu.insert(estudiante);
 				out.println("<html><head></head><body onload=\"alert('Estudiante Registrado'); window.location='index.jsp' \"></body></html>");
 			}
 			if(tipo == 2) {
-				Asesor asesor = new Asesor(nom, cod, 0, car, 0, mat, cla, doc);
-				AsesorDao as = new AsesorDao();
-				as.insert(asesor);
+				control.registrarAsesor(nom, cod, 0, car, 0, mat, cla, doc);
 				out.println("<html><head></head><body onload=\"alert('Asesor Registrado'); window.location='index.jsp' \"></body></html>");
 			}
 		}
