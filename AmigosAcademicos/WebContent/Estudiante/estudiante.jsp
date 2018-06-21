@@ -110,6 +110,7 @@ List<Asesor> asesores = control.aseDao.list();
         </a>
         <div class="responsive_menu">
             <ul class="main_menu">
+           		<li><a href="../index.jsp">Cerrar</a></li> 
                 <li><a class="show-1 homebutton" href="#"><i class="fa fa-home"></i>Horario clases</a></li>
                 <li><a class="show-2" href="#"><i class="fa fa-group"></i>Calificacion</a></li>
                 <li><a class="show-3" href="#"><i class="fa fa-briefcase"></i>Asesorias</a></li>
@@ -126,6 +127,7 @@ List<Asesor> asesores = control.aseDao.list();
                 <div class="col-md-2 visible-md visible-lg">
                     <div class="main_menu">
                         <ul class="menu">
+           					<li><a href="../index.jsp">Cerrar</a></li>             
                             <li><a class="show-1 homebutton" href="#" data-toggle="tooltip" data-original-title="Horario clases"><i class="fa fa-home"></i></a></li>
                             <li><a class="show-2" href="#" data-toggle="tooltip" data-original-title="Calificacion"><i class="fa fa-user"></i></a></li>
                             <li><a class="show-3" href="#" data-toggle="tooltip" data-original-title="Asesorias"><i class="fa fa-briefcase"></i></a></li>

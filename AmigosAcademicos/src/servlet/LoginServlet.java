@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -50,6 +51,7 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
 		//Login
 		int cod = Integer.parseInt(request.getParameter("codigo"));
 		String cla = request.getParameter("password");
@@ -59,7 +61,7 @@ public class LoginServlet extends HttpServlet {
 		String btnInicio = request.getParameter("btnInicio");
 		if(btnInicio != null){
 			if(tipo == 0){
-				response.sendRedirect("index.jsp");
+				out.println("<html><head></head><body onload=\"alert('Tipo no especificado'); window.location='index.jsp' \"></body></html>");
 			}
 			if(tipo == 1){
 				int res = control.inicioSesionEstudiante(cod, cla, doc);
@@ -80,12 +82,10 @@ public class LoginServlet extends HttpServlet {
 																					+"&dato62="+datos[61]+"&dato63="+datos[62]+"&dato64="+datos[63]+"&dato65="+datos[64]);
 				}
 				if(res == 1){
-					//JOptionPane.showMessageDialog(null, "Algo mal");
-					response.sendRedirect("index.jsp");
+					out.println("<html><head></head><body onload=\"alert('Algun dato no coincide'); window.location='index.jsp' \"></body></html>");
 				}
 				if(res == 2){
-					//JOptionPane.showMessageDialog(null, "No existe");
-					response.sendRedirect("index.jsp");
+					out.println("<html><head></head><body onload=\"alert('El Estudiant no existe'); window.location='index.jsp' \"></body></html>");
 				}
 			}
 			
@@ -146,12 +146,10 @@ public class LoginServlet extends HttpServlet {
 																					+"&dato62="+datos[61]+"&dato63="+datos[62]+"&dato64="+datos[63]+"&dato65="+datos[64]);
 				}
 				if(res == 1){
-					//JOptionPane.showMessageDialog(null, "Algo mal");
-					response.sendRedirect("index.jsp");
+					out.println("<html><head></head><body onload=\"alert('Algun dato no coincide'); window.location='index.jsp' \"></body></html>");
 				}
 				if(res == 2){
-					//JOptionPane.showMessageDialog(null, "No existe");
-					response.sendRedirect("index.jsp");
+					out.println("<html><head></head><body onload=\"alert('El Asesor no existe'); window.location='index.jsp' \"></body></html>");
 				}
 			}
 			

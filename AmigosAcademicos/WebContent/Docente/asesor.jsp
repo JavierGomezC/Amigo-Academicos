@@ -69,7 +69,7 @@ String dato63 = request.getParameter("dato63");
 String dato64 = request.getParameter("dato64");
 String dato65 = request.getParameter("dato65");
 %>
-
+<%@page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -104,6 +104,7 @@ String dato65 = request.getParameter("dato65");
         </a>
         <div class="responsive_menu">
             <ul class="main_menu">
+           		<li><a href="../index.jsp">Cerrar</a></li>
                 <li><a class="show-1 homebutton" href="#"><i class="fa fa-home"></i>Horario clases</a></li>
                 <li><a class="show-4" href="#"><i class="fa fa-cogs"></i>Configuracion</a></li>
                 <li><a class="show-5" href="#"><i class="fa fa-globe"></i>Encuentranos</a></li>
@@ -119,6 +120,7 @@ String dato65 = request.getParameter("dato65");
                 <div class="col-md-2 visible-md visible-lg">
                     <div class="main_menu">
                         <ul class="menu">
+           					<li><a href="../index.jsp">Cerrar</a></li>
                             <li><a class="show-1 homebutton" href="#" data-toggle="tooltip" data-original-title="Horario clases"><i class="fa fa-home"></i></a></li>
                             <li><a class="show-4" href="#" data-toggle="tooltip" data-original-title="Configuracion"><i class="fa fa-cog"></i></a></li>
                             <li><a class="show-5" href="#" data-toggle="tooltip" data-original-title="Encuentranos"><i class="fa fa-globe"></i></a></li>

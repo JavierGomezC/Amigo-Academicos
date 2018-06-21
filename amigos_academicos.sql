@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2018 a las 04:04:39
+-- Tiempo de generación: 21-06-2018 a las 05:14:28
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.1
 
@@ -47,8 +47,8 @@ CREATE TABLE `asesor` (
 --
 
 INSERT INTO `asesor` (`nombre`, `codigo`, `semestre`, `carrera`, `materia`, `puntuacion`, `puntuaciones`, `puntuacionprom`, `celular`, `clave`, `cedula`) VALUES
-('Alguien', 115123, 5, 'Ing de algo', 'Matealgo', 0, 0, 0, 3315634, 'miclave', 1090513),
-('Carlos Rene', 11505372, 10, 'Ingeniería de Sistemas', 'Programacion Web', 0, 0, 0, 3415125, '1234', 105897235);
+('Carlos Rene', 1151200, 10, 'Ingeniería de Sistemas', 'Programacion Web', 0, 0, 0, 0, '1234', 1090100000),
+('Claudia Gomez', 1151201, 10, 'Ingeniería de Sistemas', 'Fundamentos de programacion', 0, 0, 0, 0, '1234', 1090100001);
 
 -- --------------------------------------------------------
 
