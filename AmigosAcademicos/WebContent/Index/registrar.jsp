@@ -61,6 +61,7 @@
 									<option value="Fisica mecanica">Fisica mecanica</option>
 									<option value="Fundamentos de programacion">Fundamentos de programacion</option>
 									<option value="Programacion Web">Programacion Web</option>
+									<option value="POO II">POO II</option>
 								</select>
 							</div>
 							<ul class="actions">

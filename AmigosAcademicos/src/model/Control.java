@@ -69,7 +69,7 @@ public class Control {
 		for(int i = 0; i < estudiantes.size(); i++){
 			if(estudiantes.get(i).codigo == cod && estudiantes.get(i).clave.equals(cla) && estudiantes.get(i).documento == doc){
 				Sesion o = sesionDao.find(0);
-				o.idActualE = i;
+				o.idActualE = estudiantes.get(i).codigo;
 				sesionDao.update(o);
 				//0 Siginifica que se pudo iniciar sesion correctamente
 				return 0;
@@ -144,7 +144,7 @@ public class Control {
 		for(int i = 0; i < asesores.size(); i++){
 			if(asesores.get(i).codigo == cod && asesores.get(i).clave.equals(cla) && asesores.get(i).documento == doc){
 				Sesion o = sesionDao.find(0);
-				o.idActualA = i;
+				o.idActualA = asesores.get(i).codigo;
 				sesionDao.update(o);
 				//0 Siginifica que se pudo iniciar sesion correctamente
 				return 0;
@@ -231,8 +231,13 @@ public class Control {
 	
 		//El asesor da por terminada la asesoria
 	public void terminarAsesoria(int idAs){
-		Sesion o = sesionDao.find(0);
-		int sesionAse = o.idActualA;
+		int sesionAse = 0;
+		for(int i = 0; i < asesores.size(); i++) {
+			Sesion o = sesionDao.find(0);
+			if(asesores.get(i).codigo == o.idActualA) {
+				sesionAse = i;
+			}
+		}
 		asesores.get(sesionAse).terminarAsesoria(idAs);
 		Asesoria as = asesores.get(sesionAse).asesorias.get(idAs);
 		estudiantes.get(as.idEstudiante).terminarAsesoria(idAs);
@@ -240,8 +245,13 @@ public class Control {
 	}
 	
 	public void actualizarHora(int h, int m, String d, int ocu, int id){
-		Sesion o = sesionDao.find(0);
-		int sesionAse = o.idActualA;
+		int sesionAse = 0;
+		for(int i = 0; i < asesores.size(); i++) {
+			Sesion o = sesionDao.find(0);
+			if(asesores.get(i).codigo == o.idActualA) {
+				sesionAse = i;
+			}
+		}
 		Hora ho = new Hora(h, m, d, id);
 		asesores = aseDao.list();
 		int idH = asesores.get(sesionAse).horarioAsesorias.id;
@@ -263,9 +273,14 @@ public class Control {
 	}
 	
 	public Horario horario(){
-		Sesion o = sesionDao.find(0);
-		int sesionAse = o.idActualA;
 		asesores = aseDao.list();
+		int sesionAse = 0;
+		for(int i = 0; i < asesores.size(); i++) {
+			Sesion o = sesionDao.find(0);
+			if(asesores.get(i).codigo == o.idActualA) {
+				sesionAse = i;
+			}
+		}
 		return asesores.get(sesionAse).horarioAsesorias;
 	}
 	

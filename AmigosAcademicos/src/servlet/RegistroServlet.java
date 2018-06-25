@@ -9,11 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entities.Asesor;
-import entities.Estudiante;
-import model.AsesorDao;
 import model.Control;
-import model.EstudianteDao;
 
 /**
  * Servlet implementation class RegistroServlet
@@ -61,9 +57,6 @@ public class RegistroServlet extends HttpServlet {
 		if(btnRegistro != null){
 			if(tipo == 1) {
 				control.registrarEstudiante(nom, cod, 0, car, 0, cla, doc);
-				Estudiante estudiante = new Estudiante(nom, cod, 0, car, 0, cla, doc);
-				EstudianteDao estu = new EstudianteDao();
-				estu.insert(estudiante);
 				out.println("<html><head></head><body onload=\"alert('Estudiante Registrado'); window.location='index.jsp' \"></body></html>");
 			}
 			if(tipo == 2) {

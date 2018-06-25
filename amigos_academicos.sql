@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2018 a las 05:14:28
+-- Tiempo de generación: 25-06-2018 a las 15:41:09
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.1
 
@@ -47,8 +47,9 @@ CREATE TABLE `asesor` (
 --
 
 INSERT INTO `asesor` (`nombre`, `codigo`, `semestre`, `carrera`, `materia`, `puntuacion`, `puntuaciones`, `puntuacionprom`, `celular`, `clave`, `cedula`) VALUES
-('Carlos Rene', 1151200, 10, 'Ingeniería de Sistemas', 'Programacion Web', 0, 0, 0, 0, '1234', 1090100000),
-('Claudia Gomez', 1151201, 10, 'Ingeniería de Sistemas', 'Fundamentos de programacion', 0, 0, 0, 0, '1234', 1090100001);
+('Carlos Rene', 1151200, 0, 'Ingeniería de Sistemas', 'Programacion Web', 0, 0, 0, 0, '1234', 1090100000),
+('Claudia Gomez', 1151201, 0, 'Ingeniería de Sistemas', 'POO II', 0, 0, 0, 0, '1234', 1090100001),
+('Men', 1151423, 0, 'Ingeniería Electrónica', 'Fisica mecanica', 0, 0, 0, 0, '1234', 1090519823);
 
 -- --------------------------------------------------------
 
@@ -115,10 +116,10 @@ INSERT INTO `hora` (`hora`, `minuto`, `dia`, `ocupado`, `idHorario`, `idAsesoria
 (6, 0, 'Lunes', 0, 0, 0, 0),
 (7, 0, 'Lunes', 0, 0, 0, 1),
 (8, 0, 'Lunes', 1, 0, 0, 2),
-(9, 0, 'Lunes', 1, 0, 0, 3),
+(9, 0, 'Lunes', 0, 0, 0, 3),
 (10, 0, 'Lunes', 0, 0, 0, 4),
 (11, 0, 'Lunes', 0, 0, 0, 5),
-(12, 0, 'Lunes', 1, 0, 0, 6),
+(12, 0, 'Lunes', 0, 0, 0, 6),
 (13, 0, 'Lunes', 0, 0, 0, 7),
 (14, 0, 'Lunes', 0, 0, 0, 8),
 (15, 0, 'Lunes', 0, 0, 0, 9),
@@ -130,7 +131,7 @@ INSERT INTO `hora` (`hora`, `minuto`, `dia`, `ocupado`, `idHorario`, `idAsesoria
 (8, 0, 'Martes', 0, 0, 0, 15),
 (9, 0, 'Martes', 0, 0, 0, 16),
 (10, 0, 'Martes', 0, 0, 0, 17),
-(11, 0, 'Martes', 1, 0, 0, 18),
+(11, 0, 'Martes', 0, 0, 0, 18),
 (12, 0, 'Martes', 0, 0, 0, 19),
 (13, 0, 'Martes', 0, 0, 0, 20),
 (14, 0, 'Martes', 0, 0, 0, 21),
@@ -144,7 +145,7 @@ INSERT INTO `hora` (`hora`, `minuto`, `dia`, `ocupado`, `idHorario`, `idAsesoria
 (9, 0, 'Miercoles', 0, 0, 0, 29),
 (10, 0, 'Miercoles', 0, 0, 0, 30),
 (11, 0, 'Miercoles', 0, 0, 0, 31),
-(12, 0, 'Miercoles', 1, 0, 0, 32),
+(12, 0, 'Miercoles', 0, 0, 0, 32),
 (13, 0, 'Miercoles', 0, 0, 0, 33),
 (14, 0, 'Miercoles', 0, 0, 0, 34),
 (15, 0, 'Miercoles', 0, 0, 0, 35),
@@ -167,17 +168,17 @@ INSERT INTO `hora` (`hora`, `minuto`, `dia`, `ocupado`, `idHorario`, `idAsesoria
 (6, 0, 'Viernes', 0, 0, 0, 52),
 (7, 0, 'Viernes', 0, 0, 0, 53),
 (8, 0, 'Viernes', 0, 0, 0, 54),
-(9, 0, 'Viernes', 1, 0, 0, 55),
-(10, 0, 'Viernes', 1, 0, 0, 56),
+(9, 0, 'Viernes', 0, 0, 0, 55),
+(10, 0, 'Viernes', 0, 0, 0, 56),
 (11, 0, 'Viernes', 0, 0, 0, 57),
 (12, 0, 'Viernes', 0, 0, 0, 58),
-(13, 0, 'Viernes', 1, 0, 0, 59),
-(14, 0, 'Viernes', 1, 0, 0, 60),
+(13, 0, 'Viernes', 0, 0, 0, 59),
+(14, 0, 'Viernes', 0, 0, 0, 60),
 (15, 0, 'Viernes', 0, 0, 0, 61),
 (16, 0, 'Viernes', 0, 0, 0, 62),
 (17, 0, 'Viernes', 0, 0, 0, 63),
 (18, 0, 'Viernes', 0, 0, 0, 64),
-(6, 0, 'Lunes', 0, 1, 0, 65),
+(6, 0, 'Lunes', 1, 1, 0, 65),
 (7, 0, 'Lunes', 0, 1, 0, 66),
 (8, 0, 'Lunes', 0, 1, 0, 67),
 (9, 0, 'Lunes', 0, 1, 0, 68),
@@ -196,7 +197,7 @@ INSERT INTO `hora` (`hora`, `minuto`, `dia`, `ocupado`, `idHorario`, `idAsesoria
 (9, 0, 'Martes', 0, 1, 0, 81),
 (10, 0, 'Martes', 0, 1, 0, 82),
 (11, 0, 'Martes', 0, 1, 0, 83),
-(12, 0, 'Martes', 0, 1, 0, 84),
+(12, 0, 'Martes', 1, 1, 0, 84),
 (13, 0, 'Martes', 0, 1, 0, 85),
 (14, 0, 'Martes', 0, 1, 0, 86),
 (15, 0, 'Martes', 0, 1, 0, 87),
@@ -241,7 +242,72 @@ INSERT INTO `hora` (`hora`, `minuto`, `dia`, `ocupado`, `idHorario`, `idAsesoria
 (15, 0, 'Viernes', 0, 1, 0, 126),
 (16, 0, 'Viernes', 0, 1, 0, 127),
 (17, 0, 'Viernes', 0, 1, 0, 128),
-(18, 0, 'Viernes', 0, 1, 0, 129);
+(18, 0, 'Viernes', 0, 1, 0, 129),
+(6, 0, 'Lunes', 0, 2, 0, 130),
+(7, 0, 'Lunes', 0, 2, 0, 131),
+(8, 0, 'Lunes', 1, 2, 0, 132),
+(9, 0, 'Lunes', 1, 2, 0, 133),
+(10, 0, 'Lunes', 0, 2, 0, 134),
+(11, 0, 'Lunes', 0, 2, 0, 135),
+(12, 0, 'Lunes', 0, 2, 0, 136),
+(13, 0, 'Lunes', 0, 2, 0, 137),
+(14, 0, 'Lunes', 0, 2, 0, 138),
+(15, 0, 'Lunes', 0, 2, 0, 139),
+(16, 0, 'Lunes', 0, 2, 0, 140),
+(17, 0, 'Lunes', 0, 2, 0, 141),
+(18, 0, 'Lunes', 0, 2, 0, 142),
+(6, 0, 'Martes', 0, 2, 0, 143),
+(7, 0, 'Martes', 0, 2, 0, 144),
+(8, 0, 'Martes', 0, 2, 0, 145),
+(9, 0, 'Martes', 0, 2, 0, 146),
+(10, 0, 'Martes', 0, 2, 0, 147),
+(11, 0, 'Martes', 0, 2, 0, 148),
+(12, 0, 'Martes', 0, 2, 0, 149),
+(13, 0, 'Martes', 0, 2, 0, 150),
+(14, 0, 'Martes', 0, 2, 0, 151),
+(15, 0, 'Martes', 0, 2, 0, 152),
+(16, 0, 'Martes', 0, 2, 0, 153),
+(17, 0, 'Martes', 0, 2, 0, 154),
+(18, 0, 'Martes', 0, 2, 0, 155),
+(6, 0, 'Miercoles', 0, 2, 0, 156),
+(7, 0, 'Miercoles', 0, 2, 0, 157),
+(8, 0, 'Miercoles', 0, 2, 0, 158),
+(9, 0, 'Miercoles', 0, 2, 0, 159),
+(10, 0, 'Miercoles', 0, 2, 0, 160),
+(11, 0, 'Miercoles', 0, 2, 0, 161),
+(12, 0, 'Miercoles', 0, 2, 0, 162),
+(13, 0, 'Miercoles', 0, 2, 0, 163),
+(14, 0, 'Miercoles', 0, 2, 0, 164),
+(15, 0, 'Miercoles', 0, 2, 0, 165),
+(16, 0, 'Miercoles', 0, 2, 0, 166),
+(17, 0, 'Miercoles', 0, 2, 0, 167),
+(18, 0, 'Miercoles', 0, 2, 0, 168),
+(6, 0, 'Jueves', 0, 2, 0, 169),
+(7, 0, 'Jueves', 0, 2, 0, 170),
+(8, 0, 'Jueves', 0, 2, 0, 171),
+(9, 0, 'Jueves', 0, 2, 0, 172),
+(10, 0, 'Jueves', 0, 2, 0, 173),
+(11, 0, 'Jueves', 0, 2, 0, 174),
+(12, 0, 'Jueves', 0, 2, 0, 175),
+(13, 0, 'Jueves', 0, 2, 0, 176),
+(14, 0, 'Jueves', 0, 2, 0, 177),
+(15, 0, 'Jueves', 0, 2, 0, 178),
+(16, 0, 'Jueves', 0, 2, 0, 179),
+(17, 0, 'Jueves', 0, 2, 0, 180),
+(18, 0, 'Jueves', 0, 2, 0, 181),
+(6, 0, 'Viernes', 0, 2, 0, 182),
+(7, 0, 'Viernes', 0, 2, 0, 183),
+(8, 0, 'Viernes', 0, 2, 0, 184),
+(9, 0, 'Viernes', 0, 2, 0, 185),
+(10, 0, 'Viernes', 0, 2, 0, 186),
+(11, 0, 'Viernes', 0, 2, 0, 187),
+(12, 0, 'Viernes', 0, 2, 0, 188),
+(13, 0, 'Viernes', 0, 2, 0, 189),
+(14, 0, 'Viernes', 0, 2, 0, 190),
+(15, 0, 'Viernes', 0, 2, 0, 191),
+(16, 0, 'Viernes', 0, 2, 0, 192),
+(17, 0, 'Viernes', 0, 2, 0, 193),
+(18, 0, 'Viernes', 0, 2, 0, 194);
 
 -- --------------------------------------------------------
 
@@ -259,8 +325,9 @@ CREATE TABLE `horario` (
 --
 
 INSERT INTO `horario` (`id`, `idAsesor`) VALUES
-(0, 11505372),
-(1, 115123);
+(0, 1151200),
+(1, 1151201),
+(2, 1151423);
 
 -- --------------------------------------------------------
 
@@ -279,7 +346,7 @@ CREATE TABLE `sesion` (
 --
 
 INSERT INTO `sesion` (`idActualA`, `idActualE`, `id`) VALUES
-(1, 0, 0);
+(1151423, 1151486, 0);
 
 --
 -- Índices para tablas volcadas
